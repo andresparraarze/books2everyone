@@ -1,0 +1,185 @@
+/*Imports*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+/*Variables*/
+/*Mixing*/
+/*General*/
+* {
+  font-family: "Roboto Slab", serif;
+  color: black;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Navigation section*/
+.nav-bar {
+  display: flex;
+  background-color: rgb(233, 233, 215);
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/*Main title*/
+.title {
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+}
+.title .par {
+  color: rgb(71, 71, 55);
+}
+
+/*Login Button*/
+.login {
+  padding: 0.35rem;
+  border-radius: 35px;
+}
+
+.signup {
+  padding: 0.35rem;
+  border-radius: 35px;
+}
+
+/*Booklist title and list*/
+.booklist-title {
+  margin: 2rem;
+  margin-left: 7rem;
+}
+
+.booklist {
+  display: flex;
+  position: absolute;
+  margin: 1rem;
+  margin-left: 7rem;
+}
+.booklist .listitems {
+  list-style: none;
+}
+
+/*Footer*/
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid black;
+  height: auto;
+  width: 100%;
+  padding-top: 25px;
+  color: black;
+  background-color: rgb(233, 233, 215);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: medium;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: normal;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.social li {
+  margin: 0 10px;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.social a i {
+  font-size: 1.5rem;
+  transition: color 0.4s ease;
+}
+
+.footer-bottom {
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: small;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+/*Hover*/
+.title:hover {
+  cursor: pointer;
+}
+
+.login:hover {
+  cursor: pointer;
+  -webkit-text-decoration: underline 0.1rem;
+          text-decoration: underline 0.1rem;
+}
+
+.signup:hover {
+  cursor: pointer;
+  -webkit-text-decoration: underline 0.1rem;
+          text-decoration: underline 0.1rem;
+}
+
+.social a:hover i {
+  color: rgb(185, 174, 174);
+}/*# sourceMappingURL=style.css.map */
+
+
+.card {
+  margin: 20px;
+  display: inline-block;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.card-body {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  align-items: center;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
