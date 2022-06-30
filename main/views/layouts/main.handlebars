@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2E</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="page-container">
+
+    <!--Header-->
+    <header>
+        <nav class="navigation">
+        <div class= "nav-bar">
+            <h1><a href="#" class="title"><i class="par">Books2</i>Everyone</a></h1>
+            <div> 
+                <!-- Conditionally render login or logout links -->
+                {{#if logged_in}}
+                <button class="logout"><h3>Logout</h3></button>
+                {{else}}
+                <button class="login"><h3>Login</h3></button>
+                <button class="signup"><h3>Signup</h3></button>
+                {{/if}}
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <!--Body-->
+    <main class="content-wrap">
+         <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <h3 id="footer-text">Books2Everyone</h3>
+            <p>ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestias sunt perferendis aperiam odit debitis blanditiis eveniet repellat.</p>
+            <h3>Connect with us</h3>
+            <ul class="social">
+                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright <span>©Books2Everyone</span>, 2022</p>
+        </div>
+    </footer>
+</body>
+</html>
