@@ -31,6 +31,10 @@ BooksDetails.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    description:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     published_year: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -53,7 +57,7 @@ BooksDetails.init(
     // freezeTableName: true,
     underscored: true,
     modelName: 'booksdetails',
-    tableName: 'books-details',
+    tableName: 'booksdetails',
     timestamps: false,
   }
 );

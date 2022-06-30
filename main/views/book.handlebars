@@ -1,7 +1,14 @@
 <section class="books">
-  <img src="/images/{{book.filename}}" alt="{{book.description}}">
-  <div class="painting-details">
+  <img src="{{book.thumbnail}}">
+  <div class="book-details">
     <h3>{{book.title}}</h3>
-    <p>By: {{book.author}}</p>
+    <h5>{{book.subtitle}}</h5>
+    <p>By: {{book.authors}}</p>
+    <hr>
+    <p>{{book.description}}</p>
+    <p>No. of pages: {{book.num_pages}}</p>
+    <p>Published in: {{book.piblished_year}}</p>
+    <p>Average Rating: {{book.average_rating}}</p>
+    <p>Rated by: {{book.ratings_count}} people</p>
   </div>
 </section>
