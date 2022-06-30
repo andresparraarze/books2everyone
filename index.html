@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2E</title>
+    <title>BFE</title>
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -14,8 +14,15 @@
     <header>
         <nav class="navigation">
         <div class= "nav-bar">
-            <h1><a href="#" class="title"><i class="par">Books2</i>Everyone</a></h1>
-            <div> 
+            <h1><a href="#" class="title"><i class="par">Books</i>ForEveryone</a></h1>
+            <div>
+                <div class="search">
+                    <form action="" class="search-bar">
+                        <input type="text" placeholder="Search" name="q">
+                        <button type="submit" class="search-button"><img class="search-icon" src="./assets/search.png" alt="Search button"></button>
+                    </form>
+                </div>
+                <button class="categories"><h3>Categories</h3></button> 
                 <button class="login"><h3>Login</h3></button>
                 <button class="signup"><h3>Signup</h3></button>
             </div>
@@ -24,30 +31,284 @@
     </header>
 
     <!--Body-->
-    <main>
-        <div class="list-title">
-            <h2 class="booklist-title">List of Books</h2>
+    <section class="list-title">
+        <div>
+            <h2>Books Available</h2>
         </div>
-        <div class="booklist">
-            <ul>
-                <li class="listitems"><h4>Odissey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-                <li class="listitems"><h4>The Iliad and the Oddysey by Homer</h4></li>
-            </ul>
-        </div>
-    </main>
+    </section>
+    <section class="card-list">
+        <article class="card">
+          <header class="card-header">
+            <p>Jun 29th 2022</p>
+            <h2>Book Title</h2>
+          </header>
+  
+          <div class="card-author">
+            <a class="author-avatar" href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Epicurus_bust.jpg/200px-Epicurus_bust.jpg" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+  
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Epicuro
+            </div>
+          </div>
+          <div class="tags">
+            <a href="#">Book info</a>
+            <a href="#">Add</a>
+            <a href="#">More</a>
+          </div>
+        </article>
+  
+  
+  
+        <article class="card">
+          <header class="card-header">
+            <p>Jun 29th 2022</p>
+            <h2>Book Title</h2>
+          </header>
+  
+          <div class="card-author">
+            <a class="author-avatar" href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Sophocles_pushkin.jpg" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+  
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Sofocles
+            </div>
+          </div>
+          <div class="tags">
+            <a href="#">Book info</a>
+            <a href="#">Add</a>
+            <a href="#">More</a>
+          </div>
+        </article>
+  
+  
+  
+  
+        <article class="card">
+          <header class="card-header">
+            <p>Jun 29th 2022</p>
+            <h2>Book Title</h2>
+          </header>
+  
+          <div class="card-author">
+            <a class="author-avatar" href="#">
+              <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTgxOTIxMzkyMzQ4ODk4NDM1/gettyimages-141731439sq.jpg" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+  
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Pablo Neruda
+            </div>
+          </div>
+          <div class="tags">
+            <a href="#">Book info</a>
+            <a href="#">Add</a>
+            <a href="#">More</a>
+          </div>
+        </article>
+  
+        <article class="card">
+          <header class="card-header">
+            <p>Jun 29th 2022</p>
+            <h2>Book Title</h2>
+          </header>
+  
+          <div class="card-author">
+            <a class="author-avatar" href="#">
+              <img src="https://c8.alamy.com/comp/CR76TH/homer-greek-poet-about-800-bc-portrait-wood-engraving-from-general-CR76TH.jpg" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+  
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Homero
+            </div>
+          </div>
+          <div class="tags">
+            <a href="#">Book info</a>
+            <a href="#">Add</a>
+            <a href="#">More</a>
+          </div>
+        </article>
+  
+  
+        <article class="card">
+          <header class="card-header">
+            <p>Jun 29th 2022</p>
+            <h2>Book Title</h2>
+          </header>
+  
+          <div class="card-author">
+            <a class="author-avatar" href="#">
+              <img src="https://english.colostate.edu/wp-content/uploads/sites/56/2017/10/GabrielGarc%C3%ADaM%C3%A1rquez-480x600.jpg" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+  
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Gabriel Garcia Marquez
+            </div>
+          </div>
+          <div class="tags">
+            <a href="#">Book info</a>
+            <a href="#">Add</a>
+            <a href="#">More</a>
+          </div>
+        </article>
+  
+        <article class="card">
+          <header class="card-header">
+            <p>Jun 29th 2022</p>
+            <h2>Book Title</h2>
+          </header>
+  
+          <div class="card-author">
+            <a class="author-avatar" href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Moreno%2C_Gabriel_Ren%C3%A9.jpg" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+  
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Gabriel Rene Moreno
+            </div>
+          </div>
+          <div class="tags">
+            <a href="#">Book info</a>
+            <a href="#">Add</a>
+            <a href="#">More</a>
+          </div>
+        </article>
+  
+        <article class="card">
+          <header class="card-header">
+            <p>Jun 29th 2022</p>
+            <h2>Book Title</h2>
+          </header>
+  
+          <div class="card-author">
+            <a class="author-avatar" href="#">
+              <img src="https://i.harperapps.com/authors/1858/x500.JPG" />
+            </a>
+            <svg class="half-circle" viewBox="0 0 106 57">
+              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+            </svg>
+  
+            <div class="author-name">
+              <div class="author-name-prefix">Author</div>
+              Paulo Coelho
+            </div>
+          </div>
+          <div class="tags">
+            <a href="#">Book info</a>
+            <a href="#">Add</a>
+            <a href="#">More</a>
+          </div>
+        </article>
+
+        <article class="card">
+            <header class="card-header">
+              <p>Jun 29th 2022</p>
+              <h2>Book Title</h2>
+            </header>
+    
+            <div class="card-author">
+              <a class="author-avatar" href="#">
+                <img src="https://i.harperapps.com/authors/1858/x500.JPG" />
+              </a>
+              <svg class="half-circle" viewBox="0 0 106 57">
+                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+              </svg>
+    
+              <div class="author-name">
+                <div class="author-name-prefix">Author</div>
+                Paulo Coelho
+              </div>
+            </div>
+            <div class="tags">
+              <a href="#">Book info</a>
+              <a href="#">Add</a>
+              <a href="#">More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <p>Jun 29th 2022</p>
+              <h2>Book Title</h2>
+            </header>
+    
+            <div class="card-author">
+              <a class="author-avatar" href="#">
+                <img src="https://i.harperapps.com/authors/1858/x500.JPG" />
+              </a>
+              <svg class="half-circle" viewBox="0 0 106 57">
+                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+              </svg>
+    
+              <div class="author-name">
+                <div class="author-name-prefix">Author</div>
+                Paulo Coelho
+              </div>
+            </div>
+            <div class="tags">
+              <a href="#">Book info</a>
+              <a href="#">Add</a>
+              <a href="#">More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <p>Jun 29th 2022</p>
+              <h2>Book Title</h2>
+            </header>
+    
+            <div class="card-author">
+              <a class="author-avatar" href="#">
+                <img src="https://i.harperapps.com/authors/1858/x500.JPG" />
+              </a>
+              <svg class="half-circle" viewBox="0 0 106 57">
+                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+              </svg>
+    
+              <div class="author-name">
+                <div class="author-name-prefix">Author</div>
+                Paulo Coelho
+              </div>
+            </div>
+            <div class="tags">
+              <a href="#">Book info</a>
+              <a href="#">Add</a>
+              <a href="#">More</a>
+            </div>
+          </article>
+
+    </section>
 
     <!--Footer-->
     <footer>
         <div class="footer-content">
-            <h3 id="footer-text">Books2Everyone</h3>
+            <h3 id="footer-text">BooksForEveryone</h3>
             <p>ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestias sunt perferendis aperiam odit debitis blanditiis eveniet repellat, corrupti aspernatur non iure porro voluptate esse praesentium? Voluptas explicabo aliquam incidunt?</p>
             <h3>Connect with us</h3>
             <ul class="social">

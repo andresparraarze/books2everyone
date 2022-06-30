@@ -8,6 +8,8 @@ $sec-color: white;
 $background-color: rgb(233, 233, 215);
 $fourth-color: rgb(71, 71, 55);
 $fifth-color: rgb(185, 174, 174);
+$card-color: #bfbcc4;
+$sixth-color: rgb(125, 122, 109);
 
 /*Mixing*/
 @mixin general{
@@ -20,6 +22,11 @@ $fifth-color: rgb(185, 174, 174);
 
 @mixin hoverover {
     cursor: pointer;
+}
+
+@mixin buttons{
+    padding: 0.35rem;
+    border-radius: 35px;
 }
 
 /*General*/
@@ -40,44 +47,224 @@ $fifth-color: rgb(185, 174, 174);
     display: flex;
     text-align: center;
     text-decoration: none;
+    margin: 1rem;
+    font-size: 30px;
 
     .par{
         color: $fourth-color;
     }
 }
 
-/*Login Button*/
-.login{
-    padding: 0.35rem;
+/*search bar and button*/
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
     border-radius: 35px;
+}
+
+::placeholder{
+    color: $primary-color;
+}
+
+.search-bar button img{
+    width: 16px;
+}
+
+.search-bar button{
+    margin-left: 0.5rem;
+    border: 0;
+    border-radius: 35px;
+    width: 30px;
+    height: 30px;
+    background: #c6ac81;
+    cursor: pointer;
+}
+
+/*Categories, Login, SignupButton*/
+.categories{
+    padding: 0.50rem;
+    margin: 0 5rem;
+}
+
+.login{
+    @include buttons
 }
 
 .signup{
-    padding: 0.35rem;
-    border-radius: 35px;
+    @include buttons
 }
-
-/*Booklist title and list*/
-.booklist-title{
-    margin: 2rem;
-    margin-left: 7rem;
-}
-
-.booklist{
-    display: flex;
-    position: absolute;
+/*Body title*/
+.list-title{
     margin: 1rem;
-    margin-left: 7rem;
-    .listitems{
-        list-style: none;
-    }
+}
+
+/*Cards*/
+a {
+    text-decoration: none;
+}
+
+.card-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+
+.card-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.card {
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: $card-color;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    columns: 9;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+}
+
+.card:focus-within~.card, .card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+
+.card-header {
+    margin-bottom: auto;
+}
+
+.card-header p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: $primary-color;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    margin: .25rem 0 auto;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card-header h2:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.card-author {
+    margin: 3rem 0 0;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    position: relative;
+}
+
+.author-avatar {
+    grid-area: auto;
+    align-self: start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.author-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    display: block;
+    overflow: hidden;
+    margin: 16px 10px;
+}
+
+.author-name {
+    grid-area: auto;
+    box-sizing: border-box;
+}
+
+.author-name-prefix {
+    font-style: normal;
+    font-weight: 700;
+    color: $primary-color;
+}
+
+.half-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke: #ac8a66;
+    stroke-width: 5;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.tags {
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.tags a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: .66rem;
+    border: 3px solid #28242f;
+    border-radius: 2rem;
+    padding: .2rem .85rem .25rem;
+    position: relative;
+}
+
+.tags a:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-color: $sixth-color;
 }
 
 /*Footer*/
 footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    bottom: 0%;
+    left: 0%;
     right: 0;
     border-top: 1px solid $primary-color;
     height: auto;
@@ -149,6 +336,10 @@ footer{
 
 /*Hover*/
 .title:hover{
+    @include hoverover();
+}
+
+.categories:hover{
     @include hoverover();
 }
 
