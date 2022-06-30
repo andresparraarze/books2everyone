@@ -17,11 +17,11 @@
             <h1><a href="#" class="title"><i class="par">Books2</i>Everyone</a></h1>
             <div> 
                 <!-- Conditionally render login or logout links -->
-                {{#if logged_in}}
-                <button class="logout"><h3>Logout</h3></button>
+                {{#if loggedIn}}
+                <button class="logout"><a href='/logout'><h3>Logout</h3></a></button>
                 {{else}}
-                <button class="login"><h3>Login</h3></button>
-                <button class="signup"><h3>Signup</h3></button>
+                <button class="login"><h3><a href='/login'>Login</a></h3></button>
+                <button class="signup"><a href='/login'><h3>Signup</h3></a></button>
                 {{/if}}
             </div>
         </div>
@@ -50,5 +50,8 @@
             <p>copyright <span>©Books2Everyone</span>, 2022</p>
         </div>
     </footer>
+ {{!-- {{#if loggedIn}}  
+  <script src="/js/logout.js"></script>
+ {{/if}} --}}
 </body>
 </html>
