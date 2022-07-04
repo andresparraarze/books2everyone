@@ -4,6 +4,8 @@
     <h3>{{book.title}}</h3>
     <h5>{{book.subtitle}}</h5>
     <p>By: {{book.authors}}</p>
+    {{!-- Add button will replace below <button> --}}
+      <button id="add" data-ID="{{book.id}}">Add to Reading List</button>
     <hr>
     <p>{{book.description}}</p>
     <p>No. of pages: {{book.num_pages}}</p>
@@ -12,3 +14,5 @@
     <p>Rated by: {{book.ratings_count}} people</p>
   </div>
 </section>
+
+<script src="/js/add.js"></script>
