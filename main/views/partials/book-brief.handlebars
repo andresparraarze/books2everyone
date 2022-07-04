@@ -1,13 +1,20 @@
-<section class="card">
+ <article class="card">
   <a href="/books/{{id}}">
-    <header class="card-body">{{title}}</header>
-
-    <div >
-      <img src="{{thumbnail}}">
-      <p>By: {{authors}}</p>
-    </div>
+      <header class="card-header">
+        <p>{{published_year}}</p>
+        <h2>{{title}}</h2>
+      </header>
+<img src="{{thumbnail}}">
+      <div class="card-author">
+        <div class="author-name">
+          <div class="author-name-prefix">{{authors}}</div>
+          Epicuro
+        </div>
+      </div>
   </a>
-   {{!-- Add button will replace below <button> --}}
-  <button id="add" data-ID="{{id}}">Add to Reading List</button>
-</section>
+  <div class="tags">
+    <button id="add" data-ID="{{id}}">Add to Reading List</button>
+  </div>
+ </article>
+ 
 <script src="/js/add.js"></script>
