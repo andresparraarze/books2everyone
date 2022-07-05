@@ -57,25 +57,49 @@ $fifth-color: rgb(185, 174, 174);
     border-radius: 35px;
 }
 
-/*Booklist title and list*/
-.booklist-title{
-    margin: 2rem;
-    margin-left: 7rem;
-}
-
-.booklist{
+/*added by andres*/
+/*Book display*/
+.books{
     display: flex;
-    position: absolute;
-    margin: 1rem;
-    margin-left: 7rem;
-    .listitems{
-        list-style: none;
+    align-items: center;
+    text-align: center;
+/*Position of the text and image, if changed (specially the rem value) then check the width from .cover-img to make it proportional*/
+    margin: 5rem 30rem 5rem;
+    position: relative;
+
+    .cover-img{
+        height: auto;
+/*change the width and the image size will change and since height since is in auto the image will not lose its shape, it will be a proportionate change*/
+        width: 40%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 2rem 
     }
 }
 
+.book-details{
+
+    .main-text{
+        font-weight: bolder;
+    }
+    
+    #add{
+        padding: 0.4rem;
+        border-radius: 35px;
+    }
+}
+
+#add:hover{
+    text-decoration: underline;
+    @include hoverover()
+}
+/*Andres changes of book are until here*/
+
 /*Footer*/
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;

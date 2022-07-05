@@ -24,245 +24,62 @@
   display: flex;
   text-align: center;
   text-decoration: none;
-  margin: 1rem;
-  font-size: 30px;
 }
 .title .par {
   color: rgb(71, 71, 55);
 }
 
-/*search bar and button*/
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.search-bar {
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  align-items: center;
-  border-radius: 35px;
-}
-
-::-moz-placeholder {
-  color: black;
-}
-
-:-ms-input-placeholder {
-  color: black;
-}
-
-::placeholder {
-  color: black;
-}
-
-.search-bar button img {
-  width: 16px;
-}
-
-.search-bar button {
-  margin-left: 0.5rem;
-  border: 0;
-  border-radius: 35px;
-  width: 30px;
-  height: 30px;
-  background: #c6ac81;
-  cursor: pointer;
-}
-
-/*Logout, Login, Reading List*/
-
-.btn {
+/*Login Button*/
+.login {
   padding: 0.35rem;
   border-radius: 35px;
 }
 
-
-
-/*Body title*/
-.list-title {
-  margin: 1rem;
+.signup {
+  padding: 0.35rem;
+  border-radius: 35px;
 }
 
-/*Cards*/
-a {
-  text-decoration: none;
-}
-
-.card-list {
+/*added by andres*/
+/*Book display*/
+.books {
   display: flex;
-  padding: 3rem;
-  overflow-x: scroll;
-}
-
-/* .card-list::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-} */
-
-.card-genre-list {
-  margin-top: 3rem;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  /* column-count: 3; */
-}
-
-.card {
-  height: 550px;
-  width: 400px;
-  min-width: 250px;
-  padding: 1.5rem;
-  border-radius: 16px;
-  background: #bfbcc4;
-  box-shadow: -1rem 0 3rem #000;
-  display: flex;
-  flex-direction: column;
-  -moz-columns: 9;
-       columns: 9;
-  transition: 0.2s;
-  margin: 0;
-  scroll-snap-align: start;
-  clear: both;
+  align-items: center;
+  text-align: center;
+  /*Position of the text and image, if changed (specially the rem value) then check the width from .cover-img to make it proportional*/
+  margin: 5rem 30rem 5rem;
   position: relative;
 }
-
-.card-genre {
-  height: 80px;
-  width: 400px;
-  padding: 1.5rem;
-  margin:1rem;
-  border-radius: 16px;
-  background: rgb(172, 172, 160);
+.books .cover-img {
+  height: auto;
+  /*change the width and the image size will change and since height since is in auto the image will not lose its shape, it will be a proportionate change*/
+  width: 40%;
+  display: flex;
+  align-items: center;
   text-align: center;
+  box-sizing: border-box;
+  margin: 2rem;
 }
 
-.card:focus-within ~ .card, .card:hover ~ .card {
-  transform: translateX(130px);
+.book-details .main-text {
+  font-weight: bolder;
+}
+.book-details #add {
+  padding: 0.4rem;
+  border-radius: 35px;
 }
 
-.card:hover {
-  transform: translateY(-1rem);
-}
-
-.card:not(:first-child) {
-  margin-left: -130px;
-}
-
-.card-header {
-  margin-bottom: auto;
-}
-
-.card-header p {
-  font-size: 14px;
-  margin: 0 0 1rem;
-  color: black;
-}
-
-.card-header h2 {
-  font-size: 20px;
-  margin: 0.25rem 0 auto;
-  text-decoration: none;
-  color: inherit;
-  border: 0;
-  display: inline-block;
+#add:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 
-.card-header h2:hover {
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
-  text-shadow: none;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.card-author {
-  margin: 3rem 0 0;
-  display: grid;
-  grid-template-columns: 75px 1fr;
-  align-items: center;
-  position: relative;
-}
-
-.author-avatar {
-  grid-area: auto;
-  align-self: start;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.author-avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  filter: grayscale(100%);
-  display: block;
-  overflow: hidden;
-  margin: 16px 10px;
-}
-
-.author-name {
-  grid-area: auto;
-  box-sizing: border-box;
-}
-
-.author-name-prefix {
-  font-style: normal;
-  font-weight: 700;
-  color: black;
-}
-
-.half-circle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 48px;
-  fill: none;
-  stroke: #ac8a66;
-  stroke-width: 5;
-  stroke-linecap: round;
-  pointer-events: none;
-}
-
-.tags {
-  margin: 1rem 0 2rem;
-  padding: 0.5rem 0 1rem;
-  line-height: 2;
-  margin-bottom: 0;
-}
-
-.tags a {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.5rem;
-  color: black;
-  text-transform: uppercase;
-  font-size: 0.66rem;
-  border: 3px solid #28242f;
-  border-radius: 2rem;
-  padding: 0.2rem 0.85rem 0.25rem;
-  position: relative;
-}
-
-.tags a:hover {
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
-  text-shadow: none;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  border-color: rgb(125, 122, 109);
-}
-
+/*Andres changes of book are until here*/
 /*Footer*/
 footer {
   position: relative;
-  bottom: 0%;
-  left: 0%;
+  bottom: 0;
+  left: 0;
   right: 0;
   border-top: 1px solid black;
   height: auto;
@@ -334,10 +151,6 @@ footer {
 
 /*Hover*/
 .title:hover {
-  cursor: pointer;
-}
-
-.categories:hover {
   cursor: pointer;
 }
 
