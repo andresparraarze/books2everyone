@@ -10,7 +10,7 @@
 An application that allows anyone to browse an implemented book database, while registered users can favourite books and add it to their own list. 
 
 ### Application Deployment
-[insert heroku link here]
+https://limitless-river-58971.herokuapp.com/
 
 ### Application Screenshot
 [insert screenshot of deployed application here]
