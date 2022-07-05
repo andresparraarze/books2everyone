@@ -12,8 +12,8 @@ router.post('/', async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       req.seesion.userID = dbUserData.id;
-
-      res.status(200).json(dbUserData);
+      res.redirect('/');
+      // res.status(200).json(dbUserData);
     });
   } catch (err) {
     console.log(err);
@@ -50,10 +50,8 @@ router.post('/login', async (req, res) => {
       req.session.loggedIn = true;
       req.session.userID = dbUserData.id;
       console.log(req.session.userID);
-
-      res
-        .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+      res.redirect('/');
+      // res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
     });
   } catch (err) {
     console.log(err);
@@ -67,7 +65,7 @@ router.get('/logout', (req, res) => {
     req.session.destroy(() => {
       res.status(204).end();
     });
-    res.redirect("/");
+    res.redirect('/');
   }
   else {
     res.status(404).end();

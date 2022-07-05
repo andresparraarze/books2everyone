@@ -4,14 +4,13 @@
     <h3 class="main-text">{{book.title}}</h3>
     <h5 class="main-text">{{book.subtitle}}</h5>
     <p class="author">By: {{book.authors}}</p>
-    {{!-- Add button will replace below <button> --}}
-      <button id="add" data-ID="{{book.id}}">Add to Reading List</button>
-    <hr>
+      <button class="btn" id="add" data-ID="{{book.id}}">Add to Reading List</button>
+    <hr style="margin: 1rem auto;">
     <p>{{book.description}}</p>
-    <p>No. of pages: {{book.num_pages}}</p>
-    <p>Published in: {{book.published_year}}</p>
-    <p>Average Rating: {{book.average_rating}}</p>
-    <p>Rated by: {{book.ratings_count}} people</p>
+    <p style="margin-top: 1rem;"><span style="font-weight: bolder;">No. of pages:</span> {{book.num_pages}}</p>
+    <p><span style="font-weight: bolder;">Published in:</span> {{book.published_year}}</p>
+    <p><span style="font-weight: bolder;">Average Rating:</span> {{book.average_rating}}</p>
+    <p><span style="font-weight: bolder;">Rated by:</span> {{book.ratings_count}} people</p>
   </div>
 </section>
 
