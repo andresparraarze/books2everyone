@@ -1,9 +1,9 @@
 <section class="books">
-  <img src="{{book.thumbnail}}">
+  <img class="cover-img" src="{{book.thumbnail}}">
   <div class="book-details">
-    <h3>{{book.title}}</h3>
-    <h5>{{book.subtitle}}</h5>
-    <p>By: {{book.authors}}</p>
+    <h3 class="main-text">{{book.title}}</h3>
+    <h5 class="main-text">{{book.subtitle}}</h5>
+    <p class="author">By: {{book.authors}}</p>
     {{!-- Add button will replace below <button> --}}
       <button id="add" data-ID="{{book.id}}">Add to Reading List</button>
     <hr>
